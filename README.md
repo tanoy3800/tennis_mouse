@@ -37,12 +37,52 @@ Problem I personaly found to run the **Tennis Mouse Tracking Game**:
    - ModuleNotFoundError: No module named 'pyautogui' is the message I got when I first try to test how pyautigui work. This can be solve by change your Interpreter into Recommended path in vscode, by click the python version at the bottom right.
 
 ### uml
-- **mermaid**
+   ```mermaid
+  classDiagram
+    class TennisGame {
+        +int num_balls
+        +list balls
+        +int ball_speed
+        +float speed_increase_percentage
+        +turtle.Screen screen
+        +turtle.Turtle paddle
+        +int score
+        +turtle.Turtle score_display
 
-- **uml**
-  
-  ![uml_tennis_mouse](https://github.com/tanoy3800/tennis_mouse/blob/main/uml_tennis_mouse.png)
+        +__init__(num_balls: int)
+        +create_balls()
+        +move_paddle()
+        +move_balls()
+        +randomize_ball_angle(ball: turtle.Turtle)
+        +adjust_ball_angle(ball: turtle.Turtle)
+        +draw_walls()
+        +game_over()
+        +play_game()
+    }
 
+    class turtle.Turtle {
+        +void shape()
+        +void color()
+        +void penup()
+        +void setx(x: int)
+        +void sety(y: int)
+        +void goto(x: int, y: int)
+        +void write()
+        +void hideturtle()
+        +void clear()
+        +void speed()
+        +void pensize()
+        +void pendown()
+    }
+
+    class pyautogui {
+        +tuple position()
+    }
+
+    TennisGame "1" *-- "*" turtle.Turtle : uses
+    TennisGame "1" *-- "*" pyautogui : uses
+    turtle.Turtle "1" o-- "*" pyautogui : used by
+   ```
 
 ### Usage
 Once the program is running, follow these steps to interact with the game:
