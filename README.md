@@ -24,7 +24,7 @@ To run the **Tennis Mouse Tracking Game**, follow these steps:
      ```
 
 3. **Download the Game Code**:
-   - Download or clone the Python code for the **Tennis Mouse Tracking Game** to your local machine.
+   - Download or clone the Python code for the **Tennis Mouse Tracking Game** to your local.
 
 4. **Run the Program**:
    - Open a terminal or command prompt, navigate to the folder containing the game code, and run the Python file:
