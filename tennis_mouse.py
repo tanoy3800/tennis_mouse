@@ -1,18 +1,21 @@
+"""This file is for Final project in first year first semester about oop style turtle."""
 import turtle
-import pyautogui
 import random
 import time
 import math
+import pyautogui
+
 
 class TennisGame:
-    def __init__(self, num_balls:int=1):
+    def __init__(self,
+                 _num_balls:int = 1):
         self.screen = turtle.Screen()
         self.screen.title("Tennis Mouse Tracking Game")
         self.screen.bgcolor("black")
         self.screen.setup(width=800, height=600)
         self.screen.tracer(0)
 
-        self.num_balls = num_balls
+        self.num_balls = _num_balls
         self.balls = []
         self.ball_speed = 2
         self.speed_increase_percentage = 1.05
@@ -35,11 +38,10 @@ class TennisGame:
         self.score_display.color("white")
         self.score_display.penup()
         self.score_display.goto(0, 240)
-        self.score_display.write(f"Score: {self.score}", align="center", font=("Arial", 16, "normal"))
+        self.score_display.write(f"Score: {self.score}", align="center",
+                                 font=("Arial", 16, "normal"))
 
         self.draw_walls()  # Draw game walls
-
-        self.play_game()  # Start the game loop
 
     def create_balls(self):
         """Create balls and initialize their speed and directions."""
@@ -61,7 +63,7 @@ class TennisGame:
     def move_paddle(self):
         """Move the paddle based on the mouse position."""
         x, y = pyautogui.position()  # Get current mouse position
-        x = x - 960  # Adjust for center of the screen
+        x = x - 960  # Adjust x-coordinate to match screen
         y = (-y) + 565  # Adjust y-coordinate to match screen
 
         # Keep paddle within screen bounds
@@ -99,8 +101,9 @@ class TennisGame:
                 self.randomize_ball_angle(ball)
 
             # Paddle collision detection
-            if (ball.ycor() > self.paddle.ycor() - 10 and ball.ycor() < self.paddle.ycor() + 10) and \
-               abs(ball.xcor() - self.paddle.xcor()) < 50:
+            if (ball.ycor() > self.paddle.ycor() - 10 and \
+                ball.ycor() < self.paddle.ycor() + 10) and \
+                abs(ball.xcor() - self.paddle.xcor()) < 50:
                 if ball.dy < 0:  # Only reverse if the ball is moving downwards
                     ball.dy *= -1
                     self.adjust_ball_angle(ball)
@@ -203,7 +206,8 @@ class TennisGame:
         game_over_text.color("white")
         game_over_text.penup()
         game_over_text.goto(0, 0)
-        game_over_text.write(f"Game Over! Score: {self.score}", align="center", font=("Arial", 16, "normal"))
+        game_over_text.write(f"Game Over! Score: {self.score}", align="center",
+                             font=("Arial", 16, "normal"))
 
     def play_game(self):
         """Start the game loop to continuously move the paddle and balls."""
@@ -213,11 +217,13 @@ class TennisGame:
 
             # Update the score display
             self.score_display.clear()
-            self.score_display.write(f"Score: {self.score}", align="center", font=("Arial", 16, "normal"))
+            self.score_display.write(f"Score: {self.score}", align="center",
+                                     font=("Arial", 16, "normal"))
 
             self.screen.update()  # Update the screen with new positions
             time.sleep(0.01)  # Control the game speed
 
-if __name__ == "__main__":
-    num_balls = int(input("Enter number of balls: "))  # Ask for the number of balls
-    game = TennisGame(num_balls)  # Start the game with the specified number of balls
+
+num_balls = int(input("Enter number of balls: "))  # Ask for the number of balls
+game = TennisGame(num_balls)  # Start the game with the specified number of balls
+game.play_game() # Start the game loop
