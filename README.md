@@ -36,6 +36,14 @@ Problem I personaly found to run the **Tennis Mouse Tracking Game**:
 1. **Unable to import 'pyautogui'**:
    - ModuleNotFoundError: No module named 'pyautogui' is the message I got when I first try to test how pyautigui work. This can be solve by change your Interpreter into Recommended path in vscode, by click the python version at the bottom right.
 
+### uml
+- **mermaid**
+
+- **uml**
+  
+  ![uml_tennis_mouse](https://github.com/tanoy3800/tennis_mouse/blob/main/uml_tennis_mouse.png)
+
+
 ### Usage
 Once the program is running, follow these steps to interact with the game:
 
