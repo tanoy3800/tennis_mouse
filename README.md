@@ -101,4 +101,11 @@ Once the program is running, follow these steps to interact with the game:
 - The balls will bounce around the screen. Move the paddle with your mouse to keep them in play.
 - After hitting a ball, the speed of the game will increase, making it harder to control the paddle.
 
-For a demonstration, [you can click this to vision the game in action]().
+**For a demonstration, you can check the video of the game in action.**
+
+
+https://github.com/user-attachments/assets/e71b1459-4ad3-498f-a7fc-7b60fe71978d
+
+
+**Rating**:
+- about 90 or abit more.
