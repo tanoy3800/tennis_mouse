@@ -14,7 +14,6 @@ The **Tennis Mouse Tracking Game** is an interactive, fast-paced arcade-style ga
 
 ### How to Install and Run the Project
 To run the **Tennis Mouse Tracking Game**, follow these steps:
-
 1. **Install Python**:
    - Ensure Python 3.x is installed on your system. If not, you can download it from [python.org](https://www.python.org/downloads/).
 
@@ -32,6 +31,10 @@ To run the **Tennis Mouse Tracking Game**, follow these steps:
      ```
      python tennis_game.py
      ```
+     
+Problem I personaly found to run the **Tennis Mouse Tracking Game**:
+1. **Unable to import 'pyautogui'**:
+   - ModuleNotFoundError: No module named 'pyautogui' is the message I got when I first try to test how pyautigui work. This can be solve by change your Interpreter into Recommended path in vscode, by click the python version at the bottom right.
 
 ### Usage
 Once the program is running, follow these steps to interact with the game:
@@ -50,4 +53,4 @@ Once the program is running, follow these steps to interact with the game:
 - The balls will bounce around the screen. Move the paddle with your mouse to keep them in play.
 - After hitting a ball, the speed of the game will increase, making it harder to control the paddle.
 
-For a demonstration, you can check the video of the game in action (link to video).
+For a demonstration, [you can click this to vision the game in action]().
